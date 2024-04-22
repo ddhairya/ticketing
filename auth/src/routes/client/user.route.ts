@@ -22,7 +22,7 @@ router.route('/signup')
 router.route('/currentUser')
     .get(      
         currentUser,
-        AuthenticationCheck,
+        // AuthenticationCheck,
         UserController.currentUser
     )
 router.route('/logout')

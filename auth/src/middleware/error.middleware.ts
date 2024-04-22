@@ -3,7 +3,6 @@ import { CustomeError } from '../errors/custom.error'
 
 export const errorHandler = ( err: Error , req: Request, res: Response, next: NextFunction) => {
     if( err instanceof CustomeError) {
-        console.log("custom error")
         res.status(err.statusCode).send( {errors : err.serializeErrors()})
     }else{
 
